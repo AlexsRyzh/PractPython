@@ -12,6 +12,16 @@ def pyshader(func, w, h):
     return bytes('P6\n%d %d\n255\n' % (w, h), 'ascii') + scr
 
 
+def QuinticCurve(t):
+    return t * t * t * (t * (t * 6 - 15) + 10)
+
+
+def Lerp(a, b, t):
+    a + (b - a) * t
+
+
+
+
 # Ваш код здесь:
 def func(x, y):
     return x, y, 0
